@@ -1,5 +1,5 @@
 # base CoMSES Dockerfile
-FROM python:3
+FROM python:3-alpine
 MAINTAINER CoMSES Net <editors@openabm.org>
-
-RUN groupadd -r comses && useradd -r -g comses comses
+USER root
+RUN addgroup -S comses && adduser -G comses -S comses
