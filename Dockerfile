@@ -1,5 +1,6 @@
 # base CoMSES Dockerfile
-FROM python:3-alpine
-MAINTAINER CoMSES Net <editors@openabm.org>
+FROM python:3.5-alpine
+MAINTAINER CoMSES Net <dev@comses.net>
 USER root
-RUN addgroup -S comses && adduser -G comses -S comses
+ARG COMSES_UID=2718
+RUN addgroup -S comses && adduser -G comses -S comses -u $COMSES_UID
