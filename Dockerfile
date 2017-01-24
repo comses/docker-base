@@ -1,6 +1,7 @@
 # base CoMSES Dockerfile
-FROM python:3.5-alpine
+FROM ubuntu:16.04
 MAINTAINER CoMSES Net <dev@comses.net>
 USER root
-ARG COMSES_UID=2718
-RUN adduser -u $COMSES_UID -D comses
+ONBUILD ENV COMSES_UID=2718
+ONBUILD ENV COMSES_USER=comses
+ONBUILD RUN useradd -m --uid $COMSES_UID $COMSES_USER
