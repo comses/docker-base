@@ -1,7 +1,6 @@
 # base CoMSES Dockerfile
-FROM ubuntu:16.04
+FROM phusion/baseimage:0.9.19
 MAINTAINER CoMSES Net <dev@comses.net>
-USER root
 ONBUILD ENV PYTHONUNBUFFERED=1 \
             COMSES_UID=2718 \
             COMSES_USER=comses \
