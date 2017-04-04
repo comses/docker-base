@@ -1,6 +1,7 @@
 # base CoMSES Dockerfile
-FROM phusion/baseimage:0.9.19
-MAINTAINER CoMSES Net <dev@comses.net>
+FROM phusion/baseimage:0.9.20
+LABEL maintainer="Allen Lee <allen.lee@asu.edu>, CoMSES Net <devs@comses.net>"
+    
 ONBUILD ENV PYTHONUNBUFFERED=1 \
             COMSES_UID=2718 \
             COMSES_USER=comses \
