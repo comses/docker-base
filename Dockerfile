@@ -1,5 +1,5 @@
 # base CoMSES Dockerfile
-FROM phusion/baseimage:0.9.20
+FROM phusion/baseimage:0.9.22
 LABEL maintainer="Allen Lee <allen.lee@asu.edu>, CoMSES Net <devs@comses.net>"
     
 ONBUILD ENV PYTHONUNBUFFERED=1 \
