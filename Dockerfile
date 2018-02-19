@@ -1,5 +1,5 @@
 # base CoMSES Dockerfile
-FROM phusion/baseimage:0.9.22
+FROM phusion/baseimage:0.10.0
 LABEL maintainer="Allen Lee <allen.lee@asu.edu>"
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
