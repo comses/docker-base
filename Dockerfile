@@ -1,6 +1,5 @@
-# base CoMSES Dockerfile
-FROM phusion/baseimage:0.11
-LABEL maintainer="Allen Lee <allen.lee@asu.edu>"
+FROM phusion/baseimage:18.04-1.0.0
+LABEL maintainer="CoMSES Net <comses-dev@googlegroups.com>"
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && apt-get install -y python3-pip \
     && pip3 install nltk --no-cache-dir \
