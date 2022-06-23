@@ -1,5 +1,5 @@
-FROM phusion/baseimage:focal-1.1.0
-LABEL maintainer="CoMSES Net <comses-dev@googlegroups.com>"
+FROM phusion/baseimage:jammy-1.0.0
+LABEL maintainer="CoMSES Net <support@comses.net>"
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && apt-get install -y python3-pip \
     && pip3 install nltk --no-cache-dir \
