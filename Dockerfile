@@ -1,4 +1,4 @@
-FROM phusion/baseimage:jammy-1.0.0
+FROM phusion/baseimage:jammy-1.0.1
 LABEL maintainer="CoMSES Net <support@comses.net>"
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && apt-get install -y python3-pip \
