@@ -1,9 +1,8 @@
 FROM phusion/baseimage:jammy-1.0.4
 LABEL maintainer="CoMSES Net <support@comses.net>"
 
-RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && apt-get install -y python3-pip \
-    && pip3 install nltk --no-cache-dir \
-    && python3 -m nltk.downloader -d /usr/local/share/nltk_data stopwords punkt
+RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
+    apt-get install -y pipx
     
 ONBUILD ENV PYTHONUNBUFFERED=1 \
             COMSES_UID=2718 \
