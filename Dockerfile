@@ -2,7 +2,7 @@ FROM phusion/baseimage:jammy-1.0.4
 LABEL maintainer="CoMSES Net <support@comses.net>"
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-    apt-get install -y pipx
+    apt-get install -y build-essential pipx
     
 ONBUILD ENV PYTHONUNBUFFERED=1 \
             COMSES_UID=2718 \
